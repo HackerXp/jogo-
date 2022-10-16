@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500&family=Poppins:ital,wght@0,300;0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --black: #121f1a;
+  --blue-dark: #0e61e4;
+  --blue: #3d84f6;
+  --blue-light: #89b6ff;
+  --green-dark: #39a680;
+  --green: #63cda8;
+  --green-light: #8af4cf;
+  --green-gradient: linear-gradient(112.29deg, #63cda8 33.74%, #39a680 107.85%);
+  --gray-1: #384641;
+  --gray-2: #6d7471;
+  --gray-3: #c3c7c6;
+  --gray-rgba: rgba(109, 116, 113, 0.1);
+  --gray-rgba2: rgba(95, 92, 107, 0.1);
+  --yellow-dark: #e59400;
+  --yellow-gradient: linear-gradient(
+    110.33deg,
+    #fec000 23.67%,
+    #e59400 107.68%
+  );
+  --yellow: #fec000;
+  --yellow-light: #ffe28a;
+  --red-dark: #db3a2c;
+  --red: #ff5959;
+  --red-light: #ff8176;
+  --radius: 8px;
+  --white: #ffffff;
+  --m-width: 1000px;
+  --m-height: 94vh !important;
+  --back-grd: #f2f2f2;
+  --bi-people-circle: #{url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-person-circle' viewBox='0 0 16 16'%3E%3Cpath d='M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z'/%3E%3Cpath fill-rule='evenodd' d='M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z'/%3E%3C/svg%3E")};
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-decoration: none;
+  list-style: none;
+  user-select: none;
+  font-family: "Open Sans", Inter, sans-serif;
+}
+
+@keyframes fake {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  animation: fake 1s infinite;
+  background: var(--black) !important;
+}
+
+h2 {
+  margin: 10px;
+  text-align: center;
+}
+
+.group {
+  margin: 80px auto;
+  max-width: 850px;
+  background: var(--gray-rgba2) !important;
+  border: 1px solid var(--white) !important;
+  border-radius: 4px;
+  display: flex;
+}
+
+.players {
+  margin: 80px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 250px;
+  height: 80px;
+  border-radius: 4px;
+  background: var(--gray-3);
+}
+
+.players > span {
+  font-weight: 500;
+  font-family: "Open Sans", "Helvetica Neue";
+}
+.players > label {
+  font-weight: 900;
+  font-size: 14px;
+  font-family: "Inter";
+  color: var(--green-dark);
+}
+
+#winner-2,#winner-1{
+  display: none;
+}
+
+.container {
+  margin: 80px auto;
+  max-width: 290px;
+  padding: 20px;
+  border-radius: var(--radius);
+  background-color: var(--red-light);
+  border: 3px solid var(--red-dark);
+}
+
+#board {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2px;
+}
+
+.peace {
+  width: 75px;
+  height: 75px;
+  font-size: 30pt;
+  font-weight: 300px;
+  padding-top: 10px;
+  border-radius: 3px;
+  text-align: center;
+  background-color: var(--red);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 0;
+  color: var(--white);
+}
+
+.peace:hover {
+  background-color: var(--red-dark);
+}
+
+.peace:disabled {
+  background-color: var(--red);
+  cursor: auto;
+}
+
+.active {
+  background-color: var(--red-dark) !important;
+  border-radius: 10%;
+}
+
+/* .active::after{
+  content: attr(id);
+} */
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+}
+
+.w-100 {
+  width: 95%;
+}

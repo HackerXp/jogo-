@@ -1,0 +1,95 @@
+.btn {
+  border: 0;
+  color: var(--white);
+  cursor: pointer;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.btn-sm {
+  padding: 12px 24px;
+  font-size: 14px;
+}
+
+.btn-md {
+  padding: 14px 32px;
+  font-size: 15px;
+}
+
+.btn-success {
+  background: var(--green-dark);
+}
+
+.btn-success-grd {
+  background: var(--green-gradient);
+}
+
+.btn-success:hover {
+  background: var(--green) !important;
+}
+
+.btn-primary {
+  background: var(--blue-dark);
+}
+
+.btn-info {
+  background: var(--blue);
+}
+
+.btn-black {
+  background: var(--black);
+}
+
+.btn-warning {
+  background: var(--yellow-gradient);
+}
+
+.btn-danger {
+  background: var(--red-dark);
+}
+
+.btn-danger-light {
+  background: var(--red);
+  border: 1px solid var(--red-dark);
+}
+
+.btn-danger-light:hover {
+  background: var(--red-dark);
+  border: 1px solid var(--red);
+}
+
+.btn-gray {
+  background: var(--gray-rgba);
+}
+
+.btn-gray-1 {
+  background: var(--gray-1);
+  opacity: 0.5;
+}
+
+.b-radius {
+  border-radius: var(--radius) !important;
+}
+.btn-gray2 {
+  background: var(--gray-rgba2);
+}
+
+.btn-inverse {
+  background: var(--gray-1);
+}
+
+.text-white {
+  color: var(--white) !important;
+}
+
+.text-success {
+  color: var(--green) !important;
+}
+.text-info {
+  color: var(--blue) !important;
+}

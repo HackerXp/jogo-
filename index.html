@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Velha</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
+  </head>
+  <body>
+    <div class="group">
+      <div class="players">
+        <span>Jogador X</span>
+        <label id="winner-1">Parabéns você venceu o jogo</label>
+      </div>
+      <div class="container">
+        <div class="btn-group">
+          <button class="btn btn-sm w-100 btn-danger-light" onclick="restartGame()">Reiniciar Jogo</button>
+        </div>
+        <h2 class="text-white">Jogo da Velha</h2>
+        <div id="board">
+          <button class="peace" onclick="getPeace(event)" id="0"></button>
+          <button class="peace" onclick="getPeace(event)" id="1"></button>
+          <button class="peace" onclick="getPeace(event)" id="2"></button>
+          <button class="peace" onclick="getPeace(event)" id="3"></button>
+          <button class="peace" onclick="getPeace(event)" id="4"></button>
+          <button class="peace" onclick="getPeace(event)" id="5"></button>
+          <button class="peace" onclick="getPeace(event)" id="6"></button>
+          <button class="peace" onclick="getPeace(event)" id="7"></button>
+          <button class="peace" onclick="getPeace(event)" id="8"></button>
+        </div>
+      </div>
+      <div class="players">
+        <span>Jogador O</span>
+        <label id="winner-2">Parabéns você venceu o jogo</label>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
