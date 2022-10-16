@@ -1,5 +1,5 @@
 window.onload = () => {
-  fillBoard(0,0);
+  fillBoard(0, 0);
 };
 
 const peaces = document.querySelectorAll(".peace");
@@ -20,8 +20,7 @@ const COMBINES = [
 
 const lights = [0, 2, 8, 6];
 let ix = (jx = 0);
-fillBoard = (ix,jx) => {
-  
+fillBoard = (ix, jx) => {
   setInterval(() => {
     if (jx < lights.length * 3) {
       highLigth(lights[ix]);
@@ -40,8 +39,8 @@ fillBoard = (ix,jx) => {
 
 restartGame = () => {
   time = true;
-  ix = (jx = 0);
-  fillBoard(ix,jx);
+  ix = jx = 0;
+  fillBoard(ix, jx);
   for (let i = 0; i < 9; i++) {
     let peace = document.getElementById(i);
     peace.classList.remove("active");
@@ -98,7 +97,7 @@ endGame = (player = null) => {
     if (player == "X") label_X.style.display = "block";
     else label_O.style.display = "block";
   } else {
-    console.log("Empatou");
+    modalEmpate();
     peaces.forEach((peace) => {
       peace.setAttribute("disabled", "disabled");
     });
@@ -129,4 +128,19 @@ highLigth = (id) => {
 downLigth = (id) => {
   let peace = document.getElementById(id);
   peace.classList.remove("active");
+};
+
+closeModal = () => {
+  let modal = document.getElementById("modal-empate");
+  let overlay = document.getElementById("overlay");
+  modal.style.display = "none";
+  overlay.style.display = "none";
+  restartGame();
+};
+
+modalEmpate = () => {
+  let modal = document.getElementById("modal-empate");
+  let overlay = document.getElementById("overlay");
+  modal.style.display = "block";
+  overlay.style.display = "block";
 };

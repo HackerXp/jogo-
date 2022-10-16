@@ -8,14 +8,17 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="css/modal.css" />
   </head>
   <body>
+    <div class="overlay" id="overlay"></div>
     <div class="group">
       <div class="players">
         <span>Jogador X</span>
         <label id="winner-1">Parabéns você venceu o jogo</label>
       </div>
       <div class="container">
+       
         <div class="btn-group">
           <button class="btn btn-sm w-100 btn-danger-light" onclick="restartGame()">Reiniciar Jogo</button>
         </div>
@@ -37,6 +40,17 @@
         <label id="winner-2">Parabéns você venceu o jogo</label>
       </div>
     </div>
+    <div class="modal choose-player" id="modal-empate">
+      <div class="modal-header">
+       <h4>Jogo da Velha</h4>
+      </div>
+      <div class="modal-body">
+        <marquee behavior="" direction=""><h5>Jogo empatado</h5></marquee>
+      </div>
+     <div class="modal-footer">
+       <button  onclick="closeModal()" class="btn btn-sm btn-danger-light">Reiniciar o jogo</button>
+     </div>
+   </div>
     <script src="js/script.js"></script>
   </body>
 </html>
